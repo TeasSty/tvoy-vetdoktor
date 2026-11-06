@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <a class="skip" href="#main">К содержанию</a>
@@ -37,6 +37,9 @@
 
   <main id="main">
     <section class="stage" aria-label="Главный экран">
+      <div class="stage__media" aria-hidden="true">
+        <img src="assets/hero.jpg" alt="" width="1600" height="1067" fetchpriority="high" />
+      </div>
       <div class="stage__core">
         <p class="stage__brand">Твой ВетДоктор</p>
         <h1 class="stage__title">Ветеринарная клиника в Вологде</h1>
@@ -94,6 +97,29 @@
           <span class="register__case"><strong>Хромота, травма</strong><em>Рентген, ортопедия</em></span>
           <span class="register__to">Сердцев М.В.</span>
         </a>
+      </div>
+    </section>
+
+    <section class="film" aria-label="Фотографии">
+      <div class="film__track">
+        <figure class="film__shot film__shot--wide">
+          <img src="assets/puppy.jpg" alt="Собака на прогулке" width="1400" height="933" loading="lazy" />
+        </figure>
+        <figure class="film__shot">
+          <img src="assets/kit.jpg" alt="Рыжий котёнок" width="1200" height="1600" loading="lazy" />
+        </figure>
+        <figure class="film__shot">
+          <img src="assets/rabbit.jpg" alt="Кролик" width="1200" height="1600" loading="lazy" />
+        </figure>
+        <figure class="film__shot film__shot--wide">
+          <img src="assets/dog-care.jpg" alt="Собаки на пробежке" width="1400" height="933" loading="lazy" />
+        </figure>
+        <figure class="film__shot">
+          <img src="assets/cat-gaze.jpg" alt="Кошка" width="1200" height="1200" loading="lazy" />
+        </figure>
+        <figure class="film__shot">
+          <img src="assets/labrador.jpg" alt="Щенок" width="1400" height="1867" loading="lazy" />
+        </figure>
       </div>
     </section>
 
@@ -246,6 +272,9 @@
 
       <div class="twins__grid">
         <article class="door" data-door="pryad">
+          <div class="door__photo">
+            <img src="assets/clinic.jpg" alt="" width="1400" height="933" loading="lazy" />
+          </div>
           <div class="door__frame">
             <h3>ул. Прядильщиков, 2</h3>
             <p class="door__phone"><a href="tel:+79291239675">+7 (929) 123-96-75</a></p>
@@ -255,6 +284,9 @@
           </div>
         </article>
         <article class="door" data-door="sever">
+          <div class="door__photo">
+            <img src="assets/cat-soft.jpg" alt="" width="1200" height="1200" loading="lazy" />
+          </div>
           <div class="door__frame">
             <h3>ул. Северная, 34</h3>
             <p class="door__phone"><a href="tel:+78172700645">+7 (8172) 70-06-45</a></p>
@@ -270,6 +302,12 @@
       <div class="section-head">
         <h2>Услуги и цены</h2>
         <p class="lede">Цены ориентировочные, точную стоимость уточняйте в клинике.</p>
+      </div>
+
+      <div class="care__visual">
+        <img src="assets/exam.jpg" alt="Уход за собакой" width="1400" height="933" loading="lazy" />
+        <img src="assets/ultrasound.jpg" alt="Собака и кошка" width="1400" height="933" loading="lazy" />
+        <img src="assets/cat-clinic.jpg" alt="Кошка" width="1200" height="1600" loading="lazy" />
       </div>
 
       <div class="lanes">
@@ -373,6 +411,6 @@
     </div>
   </footer>
 
-  <script src="main.js?v=5"></script>
+  <script src="main.js?v=6"></script>
 </body>
 </html>
