@@ -90,19 +90,6 @@
     });
   });
 
-  document.querySelectorAll(".case").forEach((caseEl) => {
-    const toggle = caseEl.querySelector(".case__toggle");
-    toggle?.addEventListener("click", () => {
-      const open = !caseEl.classList.contains("is-open");
-      document.querySelectorAll(".case").forEach((other) => {
-        other.classList.remove("is-open");
-        other.querySelector(".case__toggle")?.setAttribute("aria-expanded", "false");
-      });
-      caseEl.classList.toggle("is-open", open);
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-  });
-
   const form = document.querySelector("#booking-form");
   form?.addEventListener("submit", (event) => {
     event.preventDefault();
