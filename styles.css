@@ -153,13 +153,15 @@ a:hover {
 }
 
 .btn--line {
-  background: var(--bg);
-  color: var(--ink);
-  width: 100%;
+  background: var(--ink);
+  color: #fff;
+  width: auto;
+  align-self: start;
+  margin-top: 0.35rem;
 }
 
 .btn--line:hover {
-  background: var(--ink);
+  background: var(--blue-deep);
   color: #fff;
 }
 
@@ -248,12 +250,6 @@ h2 {
   padding: 3.5rem 0;
 }
 
-.roster,
-.twins,
-.record {
-  background: #e8ecf0;
-}
-
 /* Register */
 .register {
   max-width: 1120px;
@@ -261,7 +257,7 @@ h2 {
   padding: 0 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 1.15rem;
 }
 
 .register__head,
@@ -284,12 +280,11 @@ h2 {
 .register__row {
   text-decoration: none;
   color: inherit;
-  padding: 0.9rem 0.85rem;
-  background: rgba(255, 255, 255, 0.55);
+  padding: 0.15rem 0;
 }
 
-.register__row:hover {
-  background: #fff;
+.register__row:hover .register__to {
+  color: var(--blue-deep);
 }
 
 .register__cab {
@@ -327,18 +322,18 @@ h2 {
 .roster__rail {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 1.5rem;
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
 
 .doc {
-  background: var(--surface);
+  background: transparent;
 }
 
 .doc__body {
-  padding: 1.15rem 1.1rem;
+  padding: 0;
   display: grid;
   gap: 0.35rem;
 }
@@ -375,8 +370,12 @@ h2 {
 
 .doc:target,
 .doc.is-focus {
-  outline: 2px solid var(--blue-deep);
-  outline-offset: -2px;
+  outline: none;
+}
+
+.doc.is-focus .doc__name,
+.doc:target .doc__name {
+  color: var(--blue-deep);
 }
 
 /* Cases */
@@ -386,11 +385,14 @@ h2 {
   padding: 0 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 2.25rem;
 }
 
 .case {
-  padding-bottom: 0.25rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .case__title {
@@ -427,21 +429,19 @@ h2 {
   padding: 0 1.25rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 2rem;
 }
 
 .door {
-  background: var(--surface);
+  background: transparent;
 }
 
-.door.is-active {
-  background: #fff;
-  outline: 2px solid var(--ink);
-  outline-offset: 0;
+.door.is-active .door__phone a {
+  color: var(--blue-deep);
 }
 
 .door__frame {
-  padding: 1.35rem 1.2rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
@@ -485,12 +485,12 @@ h2 {
   padding: 0 1.25rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem;
+  gap: 1.75rem;
 }
 
 .lane {
-  padding: 1.2rem 1.05rem 1.35rem;
-  background: var(--surface);
+  padding: 0;
+  background: transparent;
 }
 
 .lane h3 {
@@ -538,12 +538,12 @@ h2 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 0.75rem;
+  gap: 2rem;
 }
 
 .record__copy {
-  padding: 1.6rem 1.4rem;
-  background: var(--surface);
+  padding: 0;
+  background: transparent;
 }
 
 .record__copy p {
@@ -557,11 +557,11 @@ h2 {
 }
 
 .form {
-  padding: 1.5rem 1.4rem;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.85rem 1rem;
-  background: var(--surface);
+  background: transparent;
 }
 
 .form label {
@@ -726,7 +726,7 @@ h2 {
   }
 
   .doc__body {
-    padding: 1.05rem 1rem;
+    padding: 0;
   }
 
   .record {
