@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Твой ВетДоктор — ветеринарная клиника, Вологда</title>
+  <meta name="description" content="Ветеринарная клиника «Твой ВетДоктор» в Вологде: два филиала, офтальмология, хирургия, кардиология, УЗИ. Запись по телефону." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+
+  <header class="desk" data-branch="pryad">
+    <div class="desk__inner">
+      <div class="branch-switch" role="tablist" aria-label="Филиал">
+        <button type="button" class="branch-switch__btn is-active" role="tab" aria-selected="true" data-branch="pryad">
+          <span class="branch-switch__label">Прядильщиков, 2</span>
+        </button>
+        <button type="button" class="branch-switch__btn" role="tab" aria-selected="false" data-branch="sever">
+          <span class="branch-switch__label">Северная, 34</span>
+        </button>
+      </div>
+
+      <p class="desk__status">
+        <span data-hours>Пн–Пт 09:00–20:00 · Сб–Вс 10:00–17:00</span>
+      </p>
+
+      <div class="desk__actions">
+        <a class="btn btn--ghost" data-phone href="tel:+79291239675">+7 (929) 123-96-75</a>
+        <a class="btn btn--solid" href="#record">Запись</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stage" aria-label="Главный экран">
+      <div class="stage__core">
+        <p class="stage__brand">Твой ВетДоктор</p>
+        <h1 class="stage__title">Ветеринарная клиника в Вологде</h1>
+        <p class="stage__lead">
+          Офтальмология, кардиология, хирургия, стоматология, УЗИ, дерматология,
+          эндокринология, герпеология. Два филиала.
+        </p>
+        <nav class="stage__nav" aria-label="Разделы">
+          <a href="#doctors">Врачи</a>
+          <a href="#care">Услуги</a>
+          <a href="#branches">Филиалы</a>
+          <a href="#record">Запись</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="corridor" id="corridor">
+      <div class="section-head">
+        <h2>К какому врачу</h2>
+      </div>
+
+      <div class="register" aria-label="Направления к врачам">
+        <div class="register__head" aria-hidden="true">
+          <span>Приём</span>
+          <span>Повод</span>
+          <span>Врач</span>
+        </div>
+        <a class="register__row" href="#doctors" data-doctor="didenko">
+          <span class="register__cab">Офтальмолог</span>
+          <span class="register__case"><strong>Глаз: покраснение, травма, катаракта</strong><em>Тест Ширмера, микрохирургия роговицы</em></span>
+          <span class="register__to">Диденко Т.В.</span>
+        </a>
+        <a class="register__row" href="#doctors" data-doctor="potekhina">
+          <span class="register__cab">Кардиолог</span>
+          <span class="register__case"><strong>Одышка, кашель, слабость</strong><em>ЭКГ, УЗИ сердца, анестезия</em></span>
+          <span class="register__to">Потехина И.В.</span>
+        </a>
+        <a class="register__row" href="#doctors" data-doctor="sokolov">
+          <span class="register__cab">Стоматолог</span>
+          <span class="register__case"><strong>Запах из пасти, отказ от еды</strong><em>Санация, удаление зубов</em></span>
+          <span class="register__to">Соколов А.В.</span>
+        </a>
+        <a class="register__row" href="#care">
+          <span class="register__cab">Диагностика</span>
+          <span class="register__case"><strong>УЗИ, рентген, анализы</strong><em>Брюшная полость, сердце, лаборатория</em></span>
+          <span class="register__to">Услуги</span>
+        </a>
+        <a class="register__row" href="#doctors" data-doctor="rocheva">
+          <span class="register__cab">Герпетолог</span>
+          <span class="register__case"><strong>Рептилии и другие экзоты</strong><em>Приём герпетолога</em></span>
+          <span class="register__to">Рочева А.А.</span>
+        </a>
+        <a class="register__row" href="#doctors" data-doctor="serdtsev">
+          <span class="register__cab">Травматолог</span>
+          <span class="register__case"><strong>Хромота, травма</strong><em>Рентген, ортопедия</em></span>
+          <span class="register__to">Сердцев М.В.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="roster" id="doctors">
+      <div class="section-head">
+        <h2>Врачи</h2>
+      </div>
+
+      <div class="roster__rail">
+        <article class="doc" id="didenko">
+          <div class="doc__body">
+            <p class="doc__role">Директор · офтальмолог, хирург, терапевт</p>
+            <h3 class="doc__name">Диденко Татьяна Викторовна</h3>
+            <p class="doc__bio">Стаж более 20 лет</p>
+            <a class="doc__cta" href="#record" data-prefill="Диденко Т.В.">Запись</a>
+          </div>
+        </article>
+
+        <article class="doc" id="potekhina">
+          <div class="doc__body">
+            <p class="doc__role">Кардиолог, анестезиолог, стоматолог, терапевт</p>
+            <h3 class="doc__name">Потехина Ирина Владимировна</h3>
+            <p class="doc__bio">Стаж более 15 лет</p>
+            <a class="doc__cta" href="#record" data-prefill="Потехина И.В.">Запись</a>
+          </div>
+        </article>
+
+        <article class="doc" id="murashova">
+          <div class="doc__body">
+            <p class="doc__role">Дерматолог, хирург, терапевт</p>
+            <h3 class="doc__name">Мурашова Дарья Александровна</h3>
+            <p class="doc__bio">Стаж более 12 лет</p>
+            <a class="doc__cta" href="#record" data-prefill="Мурашова Д.А.">Запись</a>
+          </div>
+        </article>
+
+        <article class="doc" id="serdtsev">
+          <div class="doc__body">
+            <p class="doc__role">Рентгенология, ортопедия, травматология, терапевт</p>
+            <h3 class="doc__name">Сердцев Михаил Валерьевич</h3>
+            <p class="doc__bio">Стаж более 5 лет</p>
+            <a class="doc__cta" href="#record" data-prefill="Сердцев М.В.">Запись</a>
+          </div>
+        </article>
+
+        <article class="doc" id="rocheva">
+          <div class="doc__body">
+            <p class="doc__role">Герпетолог, хирург, терапевт</p>
+            <h3 class="doc__name">Рочева Александра Александровна</h3>
+            <p class="doc__bio">Стаж более 15 лет</p>
+            <a class="doc__cta" href="#record" data-prefill="Рочева А.А.">Запись</a>
+          </div>
+        </article>
+
+        <article class="doc" id="sokolov">
+          <div class="doc__body">
+            <p class="doc__role">Стоматолог, терапевт</p>
+            <h3 class="doc__name">Соколов Андрей Вадимович</h3>
+            <p class="doc__bio">Стаж более 4 лет</p>
+            <a class="doc__cta" href="#record" data-prefill="Соколов А.В.">Запись</a>
+          </div>
+        </article>
+
+        <article class="doc" id="kolesnikov">
+          <div class="doc__body">
+            <p class="doc__role">Офтальмология, рентгенология, терапевт</p>
+            <h3 class="doc__name">Колесников Алексей Юрьевич</h3>
+            <p class="doc__bio">Стаж более 2 лет</p>
+            <a class="doc__cta" href="#record" data-prefill="Колесников А.Ю.">Запись</a>
+          </div>
+        </article>
+
+        <article class="doc" id="popovtseva">
+          <div class="doc__body">
+            <p class="doc__role">Эндокринология, УЗИ, терапевт</p>
+            <h3 class="doc__name">Поповцева Дарья Игоревна</h3>
+            <p class="doc__bio">Стаж более 5 лет</p>
+            <a class="doc__cta" href="#record" data-prefill="Поповцева Д.И.">Запись</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="journal" id="journal">
+      <div class="section-head">
+        <h2>Клинические случаи</h2>
+      </div>
+
+      <div class="journal__list">
+        <article class="case">
+          <button type="button" class="case__toggle" aria-expanded="false">
+            <span class="case__title">Глубокая язва роговицы</span>
+            <span class="case__chev" aria-hidden="true"></span>
+          </button>
+          <div class="case__panel">
+            <div class="case__cols">
+              <div>
+                <p class="case__label">Обращение</p>
+                <p>Дефект роговицы на всю толщу стромы, риск перфорации.</p>
+              </div>
+              <div>
+                <p class="case__label">Что сделали</p>
+                <p>Микрохирургия и медикаментозное лечение у офтальмолога.</p>
+              </div>
+              <div>
+                <p class="case__label">Результат</p>
+                <p>Прозрачность роговицы сохранена.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <button type="button" class="case__toggle" aria-expanded="false">
+            <span class="case__title">Инородное тело в кишечнике</span>
+            <span class="case__chev" aria-hidden="true"></span>
+          </button>
+          <div class="case__panel">
+            <div class="case__cols">
+              <div>
+                <p class="case__label">Обращение</p>
+                <p>Рвота, отказ от еды. На УЗИ — инородный предмет.</p>
+              </div>
+              <div>
+                <p class="case__label">Что сделали</p>
+                <p>Хирургическое извлечение.</p>
+              </div>
+              <div>
+                <p class="case__label">Результат</p>
+                <p>Непроходимость устранена.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <button type="button" class="case__toggle" aria-expanded="false">
+            <span class="case__title">Санация ротовой полости</span>
+            <span class="case__chev" aria-hidden="true"></span>
+          </button>
+          <div class="case__panel">
+            <div class="case__cols">
+              <div>
+                <p class="case__label">Обращение</p>
+                <p>Галитоз, резорбция зубов, частичный отказ от корма.</p>
+              </div>
+              <div>
+                <p class="case__label">Что сделали</p>
+                <p>Санация под наркозом, удаление проблемных зубов.</p>
+              </div>
+              <div>
+                <p class="case__label">Результат</p>
+                <p>Зубная боль устранена.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="twins" id="branches">
+      <div class="section-head">
+        <h2>Филиалы</h2>
+      </div>
+
+      <div class="twins__grid">
+        <article class="door" data-door="pryad">
+          <div class="door__frame">
+            <h3>ул. Прядильщиков, 2</h3>
+            <p class="door__phone"><a href="tel:+79291239675">+7 (929) 123-96-75</a></p>
+            <p class="door__hours">Пн–Пт 09:00–20:00<br />Сб–Вс 10:00–17:00</p>
+            <p class="door__note">Кварцевание: 12:00–12:30 и 17:00–17:30<br />в выходные — 12:00–12:30</p>
+            <button type="button" class="btn btn--line" data-set-branch="pryad">Выбрать филиал</button>
+          </div>
+        </article>
+        <article class="door" data-door="sever">
+          <div class="door__frame">
+            <h3>ул. Северная, 34</h3>
+            <p class="door__phone"><a href="tel:+78172700645">+7 (8172) 70-06-45</a></p>
+            <p class="door__hours">Пн–Пт 09:00–20:00<br />Сб–Вс 10:00–17:00</p>
+            <p class="door__note">+7 (921) 716-06-45</p>
+            <button type="button" class="btn btn--line" data-set-branch="sever">Выбрать филиал</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="care" id="care">
+      <div class="section-head">
+        <h2>Услуги и цены</h2>
+        <p class="lede">Цены ориентировочные, точную стоимость уточняйте в клинике.</p>
+      </div>
+
+      <div class="lanes">
+        <div class="lane">
+          <h3>Диагностика</h3>
+          <ul>
+            <li>УЗИ брюшной полости <em>от 1&nbsp;850&nbsp;₽</em></li>
+            <li>УЗИ сердца <em>от 1&nbsp;700&nbsp;₽</em></li>
+            <li>УЗИ мочевой системы <em>от 1&nbsp;100&nbsp;₽</em></li>
+            <li>ЭКГ, рентген, лаборатория</li>
+          </ul>
+        </div>
+        <div class="lane">
+          <h3>Приём</h3>
+          <ul>
+            <li>Офтальмолог <em>от 700&nbsp;₽</em></li>
+            <li>Кардиолог, дерматолог, стоматолог</li>
+            <li>Герпетолог, эндокринолог</li>
+            <li>Терапевт (первичный) <em>от 420&nbsp;₽</em></li>
+          </ul>
+        </div>
+        <div class="lane">
+          <h3>Хирургия и уход</h3>
+          <ul>
+            <li>Стерилизация / кастрация</li>
+            <li>Санация ротовой полости</li>
+            <li>Дневной стационар</li>
+            <li>Выезд на дом</li>
+          </ul>
+        </div>
+        <div class="lane">
+          <h3>Ещё</h3>
+          <ul>
+            <li>Зоомагазин, корма</li>
+            <li>Вакцинация, чипирование</li>
+            <li>Оплата наличными и картой</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="record" id="record">
+      <div class="record__panel">
+        <div class="record__copy">
+          <h2>Запись</h2>
+          <p>По телефону. Через группу VK запись не ведём.</p>
+          <p class="record__live">
+            <strong data-active-branch>Прядильщиков, 2</strong>
+            · <a data-phone href="tel:+79291239675">+7 (929) 123-96-75</a>
+          </p>
+        </div>
+
+        <form class="form" id="booking-form">
+          <label>
+            Имя
+            <input name="name" type="text" required autocomplete="name" />
+          </label>
+          <label>
+            Телефон
+            <input name="phone" type="tel" required autocomplete="tel" placeholder="+7" />
+          </label>
+          <label>
+            Филиал
+            <select name="branch" id="form-branch">
+              <option value="pryad">Прядильщиков, 2</option>
+              <option value="sever">Северная, 34</option>
+            </select>
+          </label>
+          <label>
+            Врач
+            <input name="doctor" id="form-doctor" type="text" placeholder="Необязательно" />
+          </label>
+          <label class="form__full">
+            Комментарий
+            <textarea name="note" rows="3" placeholder="Вид животного, симптомы, время"></textarea>
+          </label>
+          <button class="btn btn--solid form__submit" type="submit">Отправить</button>
+          <p class="form__fine">Форма демо: на сервер не уходит. Для записи звоните.</p>
+          <p class="form__ok" hidden>Сохранено локально. Позвоните в филиал.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">Твой ВетДоктор</p>
+        <p>Ветеринарная клиника, Вологда</p>
+        <p>ИП Диденко Т.В.</p>
+      </div>
+      <div>
+        <p>Прядильщиков, 2 · <a href="tel:+79291239675">+7 (929) 123-96-75</a></p>
+        <p>Северная, 34 · <a href="tel:+78172700645">+7 (8172) 70-06-45</a></p>
+        <p><a href="mailto:vetercab@mail.ru">vetercab@mail.ru</a></p>
+      </div>
+      <div>
+        <p><a href="https://vk.ru/clubvetercab" target="_blank" rel="noopener">ВКонтакте</a></p>
+        <p><a href="https://www.instagram.com/tvoy_vetdoctor/" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
